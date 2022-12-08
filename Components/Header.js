@@ -1,5 +1,9 @@
 function Header() {
-  return <header>Header</header>;
+  return (
+    <header className="">
+      <h1>this is the header</h1>
+    </header>
+  );
 }
 
 export default Header;
