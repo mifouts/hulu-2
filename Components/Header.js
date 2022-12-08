@@ -1,9 +1,12 @@
 import Image from "next/image";
+import HeaderItem from "../Components/HeaderItem";
 
 function Header() {
   return (
     <header className="">
-      <h1>this is the header</h1>
+      <div>
+        <HeaderItem />
+      </div>
       <Image
         className="object-contain"
         src="https://links.papareact.com/ua6"
