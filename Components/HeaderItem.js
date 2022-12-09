@@ -2,7 +2,7 @@ function HeaderItem({ Icon, title }) {
   return (
     <div>
       <Icon className="h-8" />
-      <p className="tracking-widest">{title}</p>
+      <p className="opacity-0 hover:opacity-100 tracking-widest">{title}</p>
     </div>
   );
 }
