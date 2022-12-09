@@ -12,7 +12,7 @@ import HeaderItem from "../Components/HeaderItem";
 function Header() {
   return (
     <header className="">
-      <div>
+      <div className="flex flex-grow justify-evenly max-w-2xl">
         <HeaderItem title="HOME" Icon={HomeIcon} />
         <HeaderItem title="TRENDING" Icon={LightningBoltIcon} />
         <HeaderItem title="VERIFIED" Icon={BadgeCheckIcon} />
