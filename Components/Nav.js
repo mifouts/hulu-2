@@ -1,7 +1,16 @@
+import requests from "../utility/Requests";
+
 function Nav() {
   return (
-    <div>
-      <h1>this is the nav bar</h1>
+    <div className="flex">
+      {Object.entries(requests).map(([key, { title, url }]) => (
+        <h2
+          key={key}
+          className="cursor-pointer transition duration-100 transform hover:scale-125 hover:text-white active:text-red-500"
+        >
+          {title}
+        </h2>
+      ))}
     </div>
   );
 }
