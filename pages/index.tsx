@@ -4,7 +4,7 @@ import Nav from "../Components/Nav"
 import Results from "../Components/Results";
 import Requests from '../utility/Requests';
 
-export default function Home(props) {
+export default function Home(props: any) {
   return (
     <div>
       <Head>
