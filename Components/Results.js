@@ -1,5 +1,5 @@
 import React from "react";
-import Thumbnail from "../Components/Thumbnail";
+import Thumbnail from "./Thumbnail";
 
 function Results({ movies }) {
   return (
