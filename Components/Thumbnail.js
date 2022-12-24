@@ -3,7 +3,7 @@ import React from "react";
 function Thumbnail({ movie }) {
   return (
     <div>
-      <h1>thumbnail</h1>
+      <h1>this is the thumbnail</h1>
     </div>
   );
 }
