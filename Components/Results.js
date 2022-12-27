@@ -4,8 +4,8 @@ import Thumbnail from "./Thumbnail";
 function Results({ movies }) {
   return (
     <div>
-      {movies?.map((movie) => (
-        <Thumbnail key={movie.id} movie={movie} />
+      {movies?.map((movies) => (
+        <Thumbnail key={movies.id} movies={movies} />
       ))}
     </div>
   );

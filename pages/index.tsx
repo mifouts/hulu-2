@@ -4,7 +4,7 @@ import Nav from "../Components/Nav"
 import Results from "../Components/Results";
 import Requests from '../utility/Requests';
 
-export default function Home({ movie }: { movie: any }) {
+export default function Home({ movies }: { movies: any }) {
   return (
     <div>
       <Head>
@@ -15,7 +15,7 @@ export default function Home({ movie }: { movie: any }) {
 
       <Header />
       <Nav />
-      <Results movie={movie} />
+      <Results movies={movies} />
     </div>
   );
 }
