@@ -3,8 +3,10 @@ import Header from "../Components/Header"
 import Nav from "../Components/Nav"
 import Results from "../Components/Results";
 import Requests from '../utility/Requests';
+import { useRouter } from "next/router";
 
-export default function Home({ movies }: { movies: any }) {
+export default function Home({ results }: { results: any }) {
+  const router = useRouter();
   return (
     <div>
       <Head>
@@ -15,12 +17,26 @@ export default function Home({ movies }: { movies: any }) {
 
       <Header />
       <Nav />
-      <Results movies={movies} />
+      <Results results={Results} />
     </div>
   );
 }
 
-export async function getServerSideProps() {
+
+export async function getServerSideProps({ context }: { context: any }) {
+  const genre = context.query.genre;
+
+  const request = await fetch(`https://api.themoviedb.org/3${Requests[genre]?.url || Requests.fetchTrending.url}`).then((res) => res.json());
+
+  return {
+    props: {
+      Results: request.Results,
+    },
+  };
+}
+
+
+/* export async function getServerSideProps() {
   const API_KEY = '4c63251ece09180b50722dc870eaf493';
   const movieId = 550;
   const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}`);
@@ -31,7 +47,8 @@ export async function getServerSideProps() {
       movie: data,
     }
   }
-}
+}*/
+
 
 
 

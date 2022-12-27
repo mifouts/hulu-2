@@ -1,11 +1,11 @@
 import React from "react";
 import Thumbnail from "./Thumbnail";
 
-function Results({ movies }) {
+function Results({ results }) {
   return (
     <div>
-      {movies?.map((movies) => (
-        <Thumbnail key={movies.id} movies={movies} />
+      {results?.map((result) => (
+        <Thumbnail key={result.id} result={result} />
       ))}
     </div>
   );
