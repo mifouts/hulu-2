@@ -5,7 +5,7 @@ import Results from "../Components/Results";
 import Requests from '../utility/Requests';
 import { useRouter } from "next/router";
 
-export default function Home({ results }: { results: any }) {
+export default function Home({ data }: {data: any}) {
   const router = useRouter();
   return (
     <div>
@@ -17,20 +17,20 @@ export default function Home({ results }: { results: any }) {
 
       <Header />
       <Nav />
-      <Results results={Results} />
+      <Results data={data} />
     </div>
   );
 }
 
 
-export async function getServerSideProps({ context }: { context: any }) {
-  const genre = context.query.genre;
+export async function getServerSideProps() {
 
-  const request = await fetch(`https://api.themoviedb.org/3${Requests[genre]?.url || Requests.fetchTrending.url}`).then((res) => res.json());
+  const res = await fetch(`https://api.themoviedb.org/3/movie/550?api_key=4c63251ece09180b50722dc870eaf493`)
+  const data = await res.json();
 
   return {
     props: {
-      Results: request.Results,
+      data
     },
   };
 }
