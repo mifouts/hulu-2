@@ -5,7 +5,7 @@ import { ThumbUpIcon } from "@heroicons/react/outline";
 function Thumbnail({ result }) {
   const BASE_URL = "https://image.tmdb.org/t/p/original/";
   return (
-    <div className="group cursor-pointer">
+    <div className="p-2 group cursor-pointer transition duration-200 ease-in transform">
       <Image
         layout="responsive"
         height={1080}
