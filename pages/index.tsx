@@ -4,6 +4,7 @@ import Nav from "../Components/Nav"
 import Results from "../Components/Results";
 import Requests from '../utility/Requests';
 import { useRouter } from "next/router";
+import '../tailwind.config';
 
 export default function Home({ results }: any) {
   const router = useRouter();
