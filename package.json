@@ -2,7 +2,6 @@
   "name": "hulu-2",
   "version": "0.1.0",
   "private": true,
-  "main": "tailwind.config.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
