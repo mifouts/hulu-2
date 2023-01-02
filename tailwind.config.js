@@ -2,10 +2,7 @@
 
 module.exports = {
   mode: "jit",
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./pages/**/*.{tsx,ts}", "./components/**/*.js"],
   theme: {
     extend: {
       screens: {
